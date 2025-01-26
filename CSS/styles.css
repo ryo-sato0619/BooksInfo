@@ -44,3 +44,7 @@ h1 {
     font-size: 0.9em;
     margin: 0;
 }
+
+.small-text {
+    font-size: 50%;
+}
