@@ -48,3 +48,40 @@ h1 {
 .small-text {
     font-size: 50%;
 }
+
+/* メディアクエリ */
+@media (max-width: 1200px) {
+    .book-grid {
+        grid-template-columns: repeat(4, 1fr); /* 画面幅が1200px以下の場合、4列に変更 */
+    }
+}
+
+@media (max-width: 992px) {
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr); /* 画面幅が992px以下の場合、3列に変更 */
+    }
+}
+
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr); /* 画面幅が768px以下の場合、2列に変更 */
+    }
+}
+
+@media (max-width: 576px) {
+    .book-grid {
+        grid-template-columns: 1fr; /* 画面幅が576px以下の場合、1列に変更 */
+    }
+
+    .book h2 {
+        font-size: 1em; /* タイトルのフォントサイズを調整 */
+    }
+
+    .book p {
+        font-size: 0.8em; /* 著者名のフォントサイズを調整 */
+    }
+
+    .small-text {
+        font-size: 40%; /* small-textクラスのフォントサイズを調整 */
+    }
+}
