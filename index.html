@@ -8,49 +8,68 @@
 </head>
 <body>
     <h1>本の紹介ページ</h1>
-    <div class="book-grid">
+    <div class="book-grid" id="page1">
         <!-- 本のエントリーを必要に応じて作成-->
         <div class="book">
-            <a href="https://amzn.to/3PRnBSY" target"_blank">
+            <a href="https://amzn.to/3PRnBSY" target="_blank">
                 <img src="https://m.media-amazon.com/images/I/71uVlqkax0L._SY385_.jpg" alt="Amazon商品" style="width:200px;height:auto;">
             </a>
             <h3 class="small-text">作って覚えるVisual Basic 2019 デスクトップアプリ入門</h3>
             <p>vb.netの.net frameworkの勉強で一番参考になりました</p>
         </div>
         <div class="book">
-            <a href="https://amzn.to/40MLcdJ" target"_blank">
+            <a href="https://amzn.to/40MLcdJ" target="_blank">
                 <img src="https://m.media-amazon.com/images/I/81ciYDtOwmL._SY425_.jpg" alt="Amazon商品" style="width:200px;height:auto;">
             </a>
             <h3 class="small-text">1週間でLPICの基礎が学べる本 第3版 徹底攻略シリーズ</h3>
             <p>触りながら覚えられるので、基礎固めに最適でした</p>
         </div>
         <div class="book">
-            <a href="https://amzn.to/40MLcdJ" target"_blank">
+            <a href="https://amzn.to/40MLcdJ" target="_blank">
                 <img src="https://m.media-amazon.com/images/I/81ciYDtOwmL._SY425_.jpg" alt="Amazon商品" style="width:200px;height:auto;">
             </a>
             <h3 class="small-text">1週間でLPICの基礎が学べる本 第3版 徹底攻略シリーズ</h3>
             <p>触りながら覚えられるので、基礎固めに最適でした</p>
         </div>
         <div class="book">
-            <a href="https://amzn.to/40MLcdJ" target"_blank">
+            <a href="https://amzn.to/40MLcdJ" target="_blank">
                 <img src="https://m.media-amazon.com/images/I/81ciYDtOwmL._SY425_.jpg" alt="Amazon商品" style="width:200px;height:auto;">
             </a>
             <h3 class="small-text">1週間でLPICの基礎が学べる本 第3版 徹底攻略シリーズ</h3>
             <p>触りながら覚えられるので、基礎固めに最適でした</p>
         </div>
         <div class="book">
-            <a href="https://amzn.to/40MLcdJ" target"_blank">
+            <a href="https://amzn.to/40MLcdJ" target="_blank">
                 <img src="https://m.media-amazon.com/images/I/81ciYDtOwmL._SY425_.jpg" alt="Amazon商品" style="width:200px;height:auto;">
             </a>
             <h3 class="small-text">1週間でLPICの基礎が学べる本 第3版 徹底攻略シリーズ</h3>
             <p>触りながら覚えられるので、基礎固めに最適でした</p>
         </div>
+    </div>
+
+    <!--仮で固定の為、ページ機能を実装-->
+    <!--最終的には追加と変動機能を実装予定-->
+    <div class="book-grid" id="page2" style="display:none;">
         <div class="book">
-            <a href="https://amzn.to/40MLcdJ" target"_blank">
+            <a href="https://amzn.to/40MLcdJ" target="_blank">
                 <img src="https://m.media-amazon.com/images/I/81ciYDtOwmL._SY425_.jpg" alt="Amazon商品" style="width:200px;height:auto;">
             </a>
             <h3 class="small-text">1週間でLPICの基礎が学べる本 第3版 徹底攻略シリーズ</h3>
-            <p>触りながら覚えられるので、基礎固めに最適でした</p>
+            <p>判別用！触りながら覚えられるので、基礎固めに最適でした</p>
         </div>
+    </div>
+
+    <!--ボタン-->
+    <div class="pagination">
+        <button onclick="showPage('page1')">1</button>
+        <button onclick="showPage('page2')">2</button>
+    </div>
+    <script>
+        function showPage(pageId){
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'none';
+            document.getElementById(pageId).style.display = 'grid';
+        }
+    </script>
 </body>
 </html>
