@@ -1,10 +1,12 @@
-import supabase from './supabase_client.js'; 
+import { createSupabaseClient } from './supabase_client.js'; // 名前付きエクスポートを使用
 
 const booksPerPage = 10;
 let currentPage = 1;
 let totalPages = 1;
 
 async function fetchAndDisplayBooks() {
+    const supabase = await createSupabaseClient();
+
     try {
         let { data, error } = await supabase
             .from('books_info')
