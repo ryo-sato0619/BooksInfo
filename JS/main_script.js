@@ -74,6 +74,7 @@ function updatePagination(pageNumber) {
 
     if (totalPages <= 1) return;
 
+    // 現在のページ番号が1より大きい場合に「前のページ」ボタンを表示
     if (pageNumber > 1) {
         const prevButton = document.createElement('button');
         prevButton.textContent = '前のページ';
@@ -81,6 +82,7 @@ function updatePagination(pageNumber) {
         pagination.appendChild(prevButton);
     }
 
+    //現在のページ番号が総ページ数未満である場合に「次のページ」ボタンを表示
     if (pageNumber < totalPages) {
         const nextButton = document.createElement('button');
         nextButton.textContent = '次のページ';
