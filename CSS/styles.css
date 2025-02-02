@@ -67,6 +67,87 @@ h1 {
     background-color: #0056b3;
 }
 
+/* ヘッダー */
+header {
+    width: 100%;
+    background-color: #4169e1;
+    height: 80px;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: frex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: #4169e1;
+    height: 80px;
+}
+
+.menu li {
+    margin: 0;
+}
+
+.menu li a {
+    display: black;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+}
+
+.menu li a:hover {
+    background-color: #365fbb;
+}
+
+/*　連絡フォーム */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="title"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
 /* メディアクエリ */
 @media (max-width: 1200px) {
     .book-grid {
