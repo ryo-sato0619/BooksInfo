@@ -22,13 +22,21 @@
             <label for="name">お名前</label>
             <input type="text" id="name" name="name" required>
             <!--メールアドレスはrequired属性を削除して空白でも可に --> 
-            <label for="email">メールアドレス</label>
+            <label for="email">メールアドレス（任意で空白でも可）</label>
             <input type="email" id="email" name="email">
             <label for="title">書籍名</label>
             <input type="text" id="title" name="title" required>
             <label for="message">メッセージ</label>
             <textarea id="message" name="message" required></textarea>
             <button type="submit">送信</button>
+
+            <!--注意書きゾーン-->
+            <div class="notice">
+                <p class="bottom_space"></p>
+                <p>お名前、書籍名、メッセージは必須項目です</p>
+                <p>メールアドレスは任意ですが、返信を希望される場合は入力してください</p>
+                <p>ご提供頂いた情報は、適切に管理させて頂きます</p>
+            </div>
         </form>
     </div>
     <!--contact_script.jsを読み込み-->
