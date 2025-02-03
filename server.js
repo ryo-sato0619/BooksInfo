@@ -7,15 +7,15 @@ console.log('Supabase Key:', process.env.SUPABASE_ANON_KEY);
 const express = require('express');
 const cors = require('cors'); //CORSミドルウェアをインポート
 const app = express();
-constnodmailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
 //ミドルウェアの設定
 app.use(cors());
-app.use(express,json());
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //Nodemailerの設定
-const transporter = nodemailercreateTransport({
+const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
         user: process.env.EMAIL_USER,  //環境変数を使用

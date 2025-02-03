@@ -1,5 +1,5 @@
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefoult();
+    event.preventDefault();
 
     //フォームのデータ取得
     const formData = {
@@ -17,9 +17,9 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         },
         body: JSON.stringify(formData)
     })
-    .then(responese == response.json())
+    .then(response => response.json())
     .then(data => {
-        if (data.success) {
+        if (data.status === 'success') {
             alert('メッセージが送信されました');
             document.getElementById('contact-form').reset();
         } else {
